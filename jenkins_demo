@@ -5,20 +5,20 @@ pipeline {
     stages {
 
         stage('begin'){
-            step{
+            steps{
                 echo 'hello begin pipeline'
                 sleep 5
             }
         }
         stage('running'){
-            step{
+            steps{
                 echo 'hello pipeline running'
                 sleep 5
             }
         }
 
         stage('finish'){
-            step{
+            steps{
                 echo 'hello pipeline finish'
                 sleep 5
             }
