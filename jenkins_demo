@@ -3,6 +3,7 @@ pipeline {
 
 
     stages {
+
         stage('begin'){
             step{
                 echo 'hello begin pipeline'
@@ -22,53 +23,26 @@ pipeline {
                 sleep 5
             }
         }
-
-
-        post {
-            success {
-                echo 'goodbye pipeline successful!'
-                sleep 5
-            }
-
-            failure {
-                echo 'ops! pipeline failure'
-                sleep 5
-
-            }
-
-            always {
-                echo 'always say goodbye'
-
-            }
-
-
-
-
-
-        }
-
-
-
-
     }
 
 
+    post {
+        success {
+            echo 'goodbye pipeline successful!'
+            sleep 5
+        }
 
+        failure {
+            echo 'ops! pipeline failure'
+            sleep 5
 
+        }
 
+        always {
+            echo 'always say goodbye'
 
+        }
 
-
-
-
-
-
-
-
-
-
-
-
-
+    }
 
 }
